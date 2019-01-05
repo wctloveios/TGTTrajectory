@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/wctloveios/TGTOpenAccount.git", :tag => "1.0.0" }
   s.framework  = "UIKit"
 
-  s.source_files  = "{s.name/*.{h，m}}"
+  s.source_files  = "#{s.name}/**/*.{h,m}"
 
 end

@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/wctloveios/WCTAllCateGory.git", :tag => "1.0.2" }
   s.framework  = "UIKit"
 
-#s.source_files  = "{s.name/*.{h，m}}"
+  s.source_files  = "#{s.name}/**/*.{h,m}"
  
 end
