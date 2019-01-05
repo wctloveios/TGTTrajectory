@@ -1,5 +1,5 @@
 //
-//  UIColor+TGTColorExtension.h
+//  UIColor+TGTExtension.h
 //  TestTGTAllCategory
 //
 //  Created by mac on 2018/5/23.

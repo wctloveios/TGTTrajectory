@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "TGTLoginViewController.h"
+#import <TGTOpenAccount/TGTOpenAccount.h>
 
 @interface ViewController ()
 
@@ -18,12 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor redColor];
+    [[TGTOpenAccountManager shareInstance] pushLoginViewController];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[TGTLoginViewController new]];
-    [UIApplication sharedApplication].keyWindow.rootViewController = navi;
+    [[TGTOpenAccountManager shareInstance] pushLoginViewController];
 }
 
 @end

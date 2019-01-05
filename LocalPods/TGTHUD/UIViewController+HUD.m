@@ -1,8 +1,8 @@
 //
 //  UIViewController+HUDView.m
 //
-//  Created by muda on 2017/11/20.
-//  Copyright © 2017年 muda. All rights reserved.
+//  Created by mac on 2017/11/20.
+//  Copyright © 2017年 mac. All rights reserved.
 //
 
 #import "UIViewController+HUD.h"

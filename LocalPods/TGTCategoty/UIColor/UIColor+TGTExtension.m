@@ -1,5 +1,5 @@
 //
-//  UIColor+TGTColorExtension.m
+//  UIColor+TGTExtension.m
 //  TestTGTAllCategory
 //
 //  Created by mac on 2018/5/23.
@@ -28,7 +28,7 @@ static NSUInteger const klineColor = 0xEDEDED;
 static NSUInteger const kBackgroundColor = 0xFFFFFF;
 static NSUInteger const kFillColor = 0xDDDDDD;
 
-@implementation UIColor (TGTColorExtension)
+@implementation UIColor (TGTExtension)
 
 #pragma mark - LifeCircle
 

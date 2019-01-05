@@ -1,5 +1,5 @@
 //
-//  NSBundle+TGTOpenAccount.h
+//  TGTOpenAccountManager.h
 //  TGTOpenAccount
 //
 //  Created by chuntao.wang1 on 2018/12/17.
@@ -10,7 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSBundle (Extension)
+@interface TGTOpenAccountManager : NSObject
+
++ (instancetype)shareInstance;
+
+/**
+ push登录界面
+ */
+- (void)pushLoginViewController;
 
 @end
 

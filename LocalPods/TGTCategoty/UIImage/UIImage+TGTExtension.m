@@ -1,16 +1,16 @@
 //
-//  UIImage+WCTImageExtension.m
-//  WCTAllFunctionText
+//  UIImage+TGTExtension.m
+//  TGTAllFunctionText
 //
 //  Created by mac on 2018/5/22.
-//  Copyright © 2018年 WCT. All rights reserved.
+//  Copyright © 2018年 mac. All rights reserved.
 //
 
-#import "UIImage+WCTImageExtension.h"
+#import "UIImage+TGTExtension.h"
 
-@implementation UIImage (WCTImageExtension)
+@implementation UIImage (TGTExtension)
 
-+ (nullable UIImage *)WCT_imageWithColor:(UIColor *)color {
++ (nullable UIImage *)TGT_imageWithColor:(UIColor *)color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -21,7 +21,7 @@
     return image;
 }
 
-+ (nullable UIImage *)WCT_imageWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)cornerRadius {
++ (nullable UIImage *)TGT_imageWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)cornerRadius {
     UIImage *resultImage = nil;
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -39,7 +39,7 @@
     return resultImage;
 }
 
-+ (UIImage *)WCT_imageCompress:(UIImage *)image toSize:(CGSize)size {
++ (UIImage *)TGT_imageCompress:(UIImage *)image toSize:(CGSize)size {
     UIImage *newImage = nil;
     CGSize imageSize = image.size;
     CGFloat width = imageSize.width;

@@ -1,12 +1,12 @@
 //
-//  UIButton+WCTButtonExtension.m
-//  TestWCTAllCategory
+//  UIButton+TGTExtension.m
+//  TestTGTAllCategory
 //
 //  Created by mac on 2018/5/23.
 //  Copyright © 2018年 mac. All rights reserved.
 //
 
-#import "UIButton+WCTButtonExtension.h"
+#import "UIButton+TGTExtension.h"
 
 #import <objc/runtime.h>
 
@@ -15,9 +15,9 @@ static char rightNameKey;
 static char bottomNameKey;
 static char leftNameKey;
 
-@implementation UIButton (WCTButtonExtension)
+@implementation UIButton (TGTExtension)
 
-- (void)WCT_enlargeEdgeWithTop:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom left:(CGFloat)left {
+- (void)TGT_enlargeEdgeWithTop:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom left:(CGFloat)left {
     objc_setAssociatedObject(self, &topNameKey, [NSNumber numberWithFloat:top], OBJC_ASSOCIATION_COPY_NONATOMIC);
     objc_setAssociatedObject(self, &rightNameKey, [NSNumber numberWithFloat:right], OBJC_ASSOCIATION_COPY_NONATOMIC);
     objc_setAssociatedObject(self, &bottomNameKey, [NSNumber numberWithFloat:bottom], OBJC_ASSOCIATION_COPY_NONATOMIC);

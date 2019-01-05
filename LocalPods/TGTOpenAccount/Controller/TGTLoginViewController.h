@@ -10,14 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, TGTLoginType) {
-    TGTLoginTypeRegister,
-    TGTLoginTypeLogin,
-};
-
 @interface TGTLoginViewController : UIViewController
-
-@property (nonatomic, assign) TGTLoginType loginType;
 
 @end
 

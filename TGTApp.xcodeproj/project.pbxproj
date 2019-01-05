@@ -12,13 +12,7 @@
 		04ED2FD421DCE5C500AA840A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04ED2FD321DCE5C500AA840A /* Assets.xcassets */; };
 		04ED2FD721DCE5C500AA840A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ED2FD521DCE5C500AA840A /* LaunchScreen.storyboard */; };
 		04ED2FDA21DCE5C500AA840A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED2FD921DCE5C500AA840A /* main.m */; };
-		04ED2FFE21DCF02E00AA840A /* TGTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED2FFD21DCF02E00AA840A /* TGTLoginViewController.m */; };
-		04ED300121DCF2F000AA840A /* TGTLoginTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED300021DCF2F000AA840A /* TGTLoginTopView.m */; };
 		04ED300D21DCFA5E00AA840A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED300B21DCFA5E00AA840A /* ViewController.m */; };
-		04ED301521DCFC2E00AA840A /* topView.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04ED301421DCFC2E00AA840A /* topView.jpg */; };
-		04ED301B21DD04BD00AA840A /* UIColor+TGTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED301A21DD04BD00AA840A /* UIColor+TGTExtension.m */; };
-		04ED302121DD0B6200AA840A /* BATCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED301E21DD0B6200AA840A /* BATCustomButton.m */; };
-		04ED302221DD0B6200AA840A /* BATGraditorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED301F21DD0B6200AA840A /* BATGraditorButton.m */; };
 		E0E35A01570B95746A87BFFA /* libPods-TGTApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F58BDD64F878DEC31B772FBC /* libPods-TGTApp.a */; };
 /* End PBXBuildFile section */
 
@@ -50,19 +44,8 @@
 		04ED2FD921DCE5C500AA840A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04ED2FDF21DCE5C500AA840A /* TGTAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TGTAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ED2FEA21DCE5C500AA840A /* TGTAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TGTAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04ED2FFC21DCF02E00AA840A /* TGTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTLoginViewController.h; sourceTree = "<group>"; };
-		04ED2FFD21DCF02E00AA840A /* TGTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTLoginViewController.m; sourceTree = "<group>"; };
-		04ED2FFF21DCF2F000AA840A /* TGTLoginTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTLoginTopView.h; sourceTree = "<group>"; };
-		04ED300021DCF2F000AA840A /* TGTLoginTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTLoginTopView.m; sourceTree = "<group>"; };
 		04ED300B21DCFA5E00AA840A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		04ED300C21DCFA5E00AA840A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04ED301421DCFC2E00AA840A /* topView.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = topView.jpg; sourceTree = "<group>"; };
-		04ED301921DD04BD00AA840A /* UIColor+TGTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+TGTExtension.h"; path = "LocalPods/WCTAllCategory/UIColor+TGTExtension.h"; sourceTree = SOURCE_ROOT; };
-		04ED301A21DD04BD00AA840A /* UIColor+TGTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+TGTExtension.m"; path = "LocalPods/WCTAllCategory/UIColor+TGTExtension.m"; sourceTree = SOURCE_ROOT; };
-		04ED301D21DD0B6200AA840A /* BATGraditorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATGraditorButton.h; sourceTree = "<group>"; };
-		04ED301E21DD0B6200AA840A /* BATCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATCustomButton.m; sourceTree = "<group>"; };
-		04ED301F21DD0B6200AA840A /* BATGraditorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATGraditorButton.m; sourceTree = "<group>"; };
-		04ED302021DD0B6200AA840A /* BATCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATCustomButton.h; sourceTree = "<group>"; };
 		0E126CAC5E516A5EA5FEAFE5 /* Pods-TGTApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGTApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGTApp/Pods-TGTApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9359154B2901818CE9CD38B3 /* Pods-TGTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGTApp/Pods-TGTApp.release.xcconfig"; sourceTree = "<group>"; };
 		F58BDD64F878DEC31B772FBC /* libPods-TGTApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGTApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,18 +100,10 @@
 		04ED2FC921DCE5C300AA840A /* TGTApp */ = {
 			isa = PBXGroup;
 			children = (
-				04ED301421DCFC2E00AA840A /* topView.jpg */,
 				04ED2FCA21DCE5C300AA840A /* AppDelegate.h */,
 				04ED2FCB21DCE5C300AA840A /* AppDelegate.m */,
 				04ED300C21DCFA5E00AA840A /* ViewController.h */,
 				04ED300B21DCFA5E00AA840A /* ViewController.m */,
-				04ED2FFC21DCF02E00AA840A /* TGTLoginViewController.h */,
-				04ED2FFD21DCF02E00AA840A /* TGTLoginViewController.m */,
-				04ED301C21DD0B6200AA840A /* GraditorButton */,
-				04ED2FFF21DCF2F000AA840A /* TGTLoginTopView.h */,
-				04ED300021DCF2F000AA840A /* TGTLoginTopView.m */,
-				04ED301921DD04BD00AA840A /* UIColor+TGTExtension.h */,
-				04ED301A21DD04BD00AA840A /* UIColor+TGTExtension.m */,
 				04ED2FD021DCE5C300AA840A /* Main.storyboard */,
 				04ED2FD321DCE5C500AA840A /* Assets.xcassets */,
 				04ED2FD521DCE5C500AA840A /* LaunchScreen.storyboard */,
@@ -136,17 +111,6 @@
 				04ED2FD921DCE5C500AA840A /* main.m */,
 			);
 			path = TGTApp;
-			sourceTree = "<group>";
-		};
-		04ED301C21DD0B6200AA840A /* GraditorButton */ = {
-			isa = PBXGroup;
-			children = (
-				04ED301D21DD0B6200AA840A /* BATGraditorButton.h */,
-				04ED301E21DD0B6200AA840A /* BATCustomButton.m */,
-				04ED301F21DD0B6200AA840A /* BATGraditorButton.m */,
-				04ED302021DD0B6200AA840A /* BATCustomButton.h */,
-			);
-			path = GraditorButton;
 			sourceTree = "<group>";
 		};
 		405E6F9F64F199544605EDCE /* Frameworks */ = {
@@ -275,7 +239,6 @@
 				04ED2FD721DCE5C500AA840A /* LaunchScreen.storyboard in Resources */,
 				04ED2FD421DCE5C500AA840A /* Assets.xcassets in Resources */,
 				04ED2FD221DCE5C300AA840A /* Main.storyboard in Resources */,
-				04ED301521DCFC2E00AA840A /* topView.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +283,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TGTApp/Pods-TGTApp-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TGTHUD/TGTHUD.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TGTOpenAccount/TGTOpenAccount.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TGTHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TGTOpenAccount.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -352,12 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04ED2FDA21DCE5C500AA840A /* main.m in Sources */,
-				04ED2FFE21DCF02E00AA840A /* TGTLoginViewController.m in Sources */,
-				04ED302121DD0B6200AA840A /* BATCustomButton.m in Sources */,
-				04ED300121DCF2F000AA840A /* TGTLoginTopView.m in Sources */,
 				04ED2FCC21DCE5C300AA840A /* AppDelegate.m in Sources */,
-				04ED302221DD0B6200AA840A /* BATGraditorButton.m in Sources */,
-				04ED301B21DD04BD00AA840A /* UIColor+TGTExtension.m in Sources */,
 				04ED300D21DCFA5E00AA840A /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,10 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TGTApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.TGTApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -547,10 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TGTApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.TGTApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -563,11 +520,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TGTAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.TGTAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -581,11 +534,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TGTAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.TGTAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,11 +547,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TGTAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.TGTAppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -615,11 +560,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TGTAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.TGTAppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

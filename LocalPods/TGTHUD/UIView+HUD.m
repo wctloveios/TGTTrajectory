@@ -2,7 +2,7 @@
 //  UIView+HUD.m
 //  CocoaAsyncSocket
 //
-//  Created by chuntao.wang1 on 2018/5/31.
+//  Created by mac on 2018/5/31.
 //
 
 #import "UIView+HUD.h"

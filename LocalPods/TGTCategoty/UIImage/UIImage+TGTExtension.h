@@ -1,16 +1,16 @@
 //
-//  UIImage+WCTImageExtension.h
-//  WCTAllFunctionText
+//  UIImage+TGTExtension.h
+//  TGTAllFunctionText
 //
 //  Created by mac on 2018/5/22.
-//  Copyright © 2018年 WCT. All rights reserved.
-//  The author：WCT
+//  Copyright © 2018年 mac. All rights reserved.
+//  The author：TGT
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImage (WCTImageExtension)
+@interface UIImage (TGTExtension)
 
 /**
  颜色生成图片
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param color 颜色
  @return 图片
  */
-+ (nullable UIImage *)WCT_imageWithColor:(UIColor *)color;
++ (nullable UIImage *)TGT_imageWithColor:(UIColor *)color;
 
 /**
  颜色生成图片
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param cornerRadius 图片圆角
  @return 图片
  */
-+ (nullable UIImage *)WCT_imageWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)cornerRadius;
++ (nullable UIImage *)TGT_imageWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)cornerRadius;
 
 /**
  图片不拉伸
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param size 图片区域
  @return 图片
  */
-+ (UIImage *)WCT_imageCompress:(UIImage *)image toSize:(CGSize)size;
++ (UIImage *)TGT_imageCompress:(UIImage *)image toSize:(CGSize)size;
 
 @end
 

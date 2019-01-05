@@ -15,8 +15,9 @@ Pod::Spec.new do |s|
   s.source       =  { 'path' => s.name }
   s.source_files  = "#{s.name}/**/*.{h,m}"
   s.resource_bundles = {
-    'IMSHUD' => ["TGTHUD/**/*.{png}"],
-  } 
+      'TGTHUD' => ["#{s.name}/**/*.png"],
+  }
+  
 
   s.dependency 'MBProgressHUD', '0.9.1'
 end

@@ -1,16 +1,16 @@
 //
-//  NSString+TGTOpenAccount.h
+//  NSString+TGTExtension.h
 //  TGTOpenAccount
 //
-//  Created by chuntao.wang1 on 2018/12/18.
-//  Copyright © 2018年 chuntao.wang1. All rights reserved.
+//  Created by TGT on 2018/12/18.
+//  Copyright © 2018年 TGT. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSString (Extension)
+@interface NSString (TGTExtension)
 
 #pragma mark - 手机正则校验
 /**

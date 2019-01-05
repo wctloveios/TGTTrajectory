@@ -2,8 +2,8 @@
 //  TGTHUD.h
 //  TGTHUD
 //
-//  Created by WCT on 2018/4/16.
-//  Copyright © 2018年 WCT. All rights reserved.
+//  Created by TGT on 2018/4/16.
+//  Copyright © 2018年 TGT. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,5 +16,9 @@ FOUNDATION_EXPORT const unsigned char TGTCategotyVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TGTCategoty/PublicHeader.h>
 
-#import <TGTCategoty/NSBundle+Extension.h>
-#import <TGTCategoty/NSString+Extension.h>
+#import <TGTCategoty/NSBundle+TGTExtension.h>
+#import <TGTCategoty/NSString+TGTExtension.h>
+#import <TGTCategoty/UIButton+TGTExtension.h>
+#import <TGTCategoty/UIColor+TGTExtension.h>
+#import <TGTCategoty/UIFont+TGTExtension.h>
+#import <TGTCategoty/UIImage+TGTExtension.h>

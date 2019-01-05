@@ -1,14 +1,14 @@
 //
-//  NSString+TGTOpenAccount.m
+//  NSString+TGTExtension.m
 //  TGTOpenAccount
 //
-//  Created by chuntao.wang1 on 2018/12/18.
-//  Copyright © 2018年 chuntao.wang1. All rights reserved.
+//  Created by mac on 2018/12/18.
+//  Copyright © 2018年 mac. All rights reserved.
 //
 
-#import "NSString+Extension.h"
+#import "NSString+TGTExtension.h"
 
-@implementation NSString (Extension)
+@implementation NSString (TGTExtension)
 
 + (BOOL)checkPhoneRegularExpression:(NSString *)phoneNumber {
     /*
