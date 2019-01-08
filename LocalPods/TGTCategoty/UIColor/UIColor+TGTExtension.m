@@ -14,19 +14,23 @@ static NSString* const kSystemLeftKey = @"SystemLeft";
 static NSString* const kSystemRightKey = @"SystemRight";
 static NSString* const kNegativeKey = @"Negative";
 static NSString* const kTitleKey = @"Title";
-static NSString* const kAccessaryKey = @"Accessary";
+static NSString* const kBBBBBBKey = @"BBBBBB";
 static NSString* const kLineKey = @"Marginal";
-static NSString* const kBackgroundKey = @"Background";
-static NSString* const kFillKey = @"Fill";
+static NSString* const kFFFFFFKey = @"FFFFFF";
+static NSString* const kDDDDDDKey = @"DDDDDD";
+static NSString* const kEEEEEEKey = @"EEEEEE";
+static NSString* const kCCCCCCKey = @"CCCCCC";
 
 static NSUInteger const kSystemLeftColor = 0x0000FF;
 static NSUInteger const kSystemRifhtColor = 0xFF0000;
 static NSUInteger const kNegativeColor = 0xFF352F;
 static NSUInteger const kTitleColor = 0x000000;
-static NSUInteger const kAccessaryColor = 0xBBBBBB;
+static NSUInteger const kBBBBBBColor = 0xBBBBBB;
 static NSUInteger const klineColor = 0xEDEDED;
-static NSUInteger const kBackgroundColor = 0xFFFFFF;
-static NSUInteger const kFillColor = 0xDDDDDD;
+static NSUInteger const kFFFFFFColor = 0xFFFFFF;
+static NSUInteger const kDDDDDDColor = 0xDDDDDD;
+static NSUInteger const kEEEEEEColor = 0xEEEEEE;
+static NSUInteger const kCCCCCCColor = 0xCCCCCC;
 
 @implementation UIColor (TGTExtension)
 
@@ -37,10 +41,12 @@ static NSUInteger const kFillColor = 0xDDDDDD;
                                          kSystemRightKey:@(kSystemRifhtColor),
                                          kNegativeKey:@(kNegativeColor),
                                          kTitleKey:@(kTitleColor),
-                                         kAccessaryKey:@(kAccessaryColor),
+                                         kBBBBBBKey:@(kBBBBBBColor),
                                          kLineKey:@(klineColor),
-                                         kBackgroundKey:@(kBackgroundColor),
-                                         kFillKey:@(kFillColor)
+                                         kFFFFFFKey:@(kFFFFFFColor),
+                                         kDDDDDDKey:@(kDDDDDDColor),
+                                         kEEEEEEKey:@(kEEEEEEColor),
+                                         kCCCCCCKey:@(kCCCCCCColor)
                                          }];
 }
 
@@ -79,20 +85,28 @@ static NSUInteger const kFillColor = 0xDDDDDD;
     return [self TGT_colorWithCacheKey:kTitleKey];
 }
 
-+ (nullable UIColor *)TGT_accessaryColor {
-    return [self TGT_colorWithCacheKey:kAccessaryKey];
++ (nullable UIColor *)TGT_BBBBBBColor {
+    return [self TGT_colorWithCacheKey:kBBBBBBKey];
 }
 
 + (nullable UIColor *)TGT_lineColor {
     return [self TGT_colorWithCacheKey:kLineKey];
 }
 
-+ (nullable UIColor *)TGT_backgroundColor {
-    return [self TGT_colorWithCacheKey:kBackgroundKey];
++ (nullable UIColor *)TGT_FFFFFFColor {
+    return [self TGT_colorWithCacheKey:kFFFFFFKey];
 }
 
-+ (nullable UIColor *)TGT_fillColor {
-    return [self TGT_colorWithCacheKey:kFillKey];
++ (nullable UIColor *)TGT_DDDDDDColor {
+    return [self TGT_colorWithCacheKey:kDDDDDDKey];
+}
+
++ (nullable UIColor *)TGT_EEEEEEColor {
+    return [self TGT_colorWithCacheKey:kEEEEEEKey];
+}
+
++ (nullable UIColor *)TGT_CCCCCCColor {
+    return [self TGT_colorWithCacheKey:kCCCCCCKey];
 }
 
 + (nullable UIColor *)TGT_colorWithCacheKey:(NSString *)key {
@@ -113,9 +127,7 @@ static NSUInteger const kFillColor = 0xDDDDDD;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         cache = [[NSMutableDictionary alloc] initWithCapacity:8];
-        keys = @[kSystemLeftKey,kSystemRightKey,kNegativeKey,kTitleKey,
-                 kAccessaryKey,kLineKey,
-                 kBackgroundKey,kFillKey];
+        keys = @[kSystemLeftKey,kSystemRightKey,kNegativeKey,kTitleKey,kBBBBBBKey,kLineKey,kFFFFFFKey,kDDDDDDKey,kEEEEEEKey,kCCCCCCKey];
     });
     if (plist != nil) {
         [cache removeAllObjects];

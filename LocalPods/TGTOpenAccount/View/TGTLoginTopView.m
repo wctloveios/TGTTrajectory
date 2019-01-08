@@ -9,6 +9,7 @@
 #import "TGTLoginTopView.h"
 #import <Masonry/Masonry.h>
 #import "UIImage+OpenAccount.h"
+#import <TGTCategoty/TGTCategoty.h>
 
 @implementation TGTLoginTopView
 
@@ -43,7 +44,8 @@
     [self.tgt_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.tgt_descLabel.mas_bottom).offset(80);
         make.left.mas_offset(70);
-        make.height.width.mas_offset(20 );
+        make.height.mas_offset(20);
+        make.width.mas_offset(15);
     }];
 
     [self addSubview:self.tgt_titleLabel];
@@ -58,8 +60,7 @@
 - (UIImageView *)tgt_imageView {
     if (!_tgt_imageView) {
         _tgt_imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _tgt_imageView.image = [UIImage tgt_imageName:@"TGTOpenAccount_topImage"];
-        _tgt_imageView.backgroundColor = [UIColor redColor];
+        _tgt_imageView.image = [UIImage tgt_imageName:@"tgt_topImage"];
     }
     
     return _tgt_imageView;
@@ -70,7 +71,7 @@
         _tgt_descLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _tgt_descLabel.textAlignment = NSTextAlignmentCenter;
         _tgt_descLabel.text = @"或许会有一些宣传语";
-        _tgt_descLabel.font = [UIFont fontWithName:@"PingFangSC-Medium" size:16];
+        _tgt_descLabel.font = [UIFont TGT_mediumFontOfSize:16];
     }
     
     return _tgt_descLabel;
@@ -89,7 +90,6 @@
 - (UIImageView *)tgt_iconImageView {
     if (!_tgt_iconImageView) {
         _tgt_iconImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _tgt_iconImageView.backgroundColor = [UIColor redColor];
     }
     
     return _tgt_iconImageView;

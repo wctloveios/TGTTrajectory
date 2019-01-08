@@ -5,9 +5,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 target ‘TGTApp’ do
     
     #business
-    pod 'TGTOpenAccount',:path =>'LocalPods/TGTOpenAccount.podspec'
-    pod 'TGTHUD',:path =>'LocalPods/TGTHUD.podspec'
-    pod 'TGTCategoty',:path =>'LocalPods/TGTCategoty.podspec'
+    pod 'TGTOpenAccount',	:path =>'LocalPods/TGTOpenAccount.podspec'
+    pod 'TGTHUD',		:path =>'LocalPods/TGTHUD.podspec'
+    pod 'TGTCategoty',		:path =>'LocalPods/TGTCategoty.podspec'
 
     #external
     pod 'Masonry', '1.1.0'

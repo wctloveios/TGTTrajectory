@@ -30,10 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable UIColor *)TGT_systemRightColor; /* 主题色2(如果只有一种，直接使用主题色1) */
 + (nullable UIColor *)TGT_negativeColor;    /* 导航栏颜色*/
 + (nullable UIColor *)TGT_titleColor;       /* 标题文字颜色*/
-+ (nullable UIColor *)TGT_accessaryColor;   /* 描述文字颜色*/
++ (nullable UIColor *)TGT_BBBBBBColor;      /* 描述文字颜色*/
 + (nullable UIColor *)TGT_lineColor;        /* 线条颜色*/
-+ (nullable UIColor *)TGT_backgroundColor;  /* 控制器填充背景色 */
-+ (nullable UIColor *)TGT_fillColor;        /* 按钮填充色*/
++ (nullable UIColor *)TGT_FFFFFFColor;       /* 白色*/
++ (nullable UIColor *)TGT_DDDDDDColor;       /* 按钮填充色*/
++ (nullable UIColor *)TGT_EEEEEEColor;       /* 背景灰色*/
++ (nullable UIColor *)TGT_CCCCCCColor;       /* 线条灰色*/
 
 /**
  用于初始化上面的几个标志性颜色

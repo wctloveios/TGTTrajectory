@@ -1,5 +1,5 @@
 //
-//  TGTVerificationCodeViewController.h
+//  TGTVerCodeViewController.h
 //  BlocksKit
 //
 //  Created by mac on 2019/1/5.
@@ -10,9 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TGTVerificationCodeViewController : UIViewController
+@interface TGTVerCodeViewController : UIViewController
 
 @property (nonatomic, assign) TGTLoginType tgtLoginType;
+//注册时需要
+@property (nonatomic, strong) NSString *iPhoneStr;
 
 @end
 

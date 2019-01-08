@@ -11,7 +11,7 @@
 @implementation UIImage (OpenAccount)
 
 + (UIImage *)tgt_imageName:(NSString *)imageName {
-    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle getOpenAccountBundle] pathForResource:imageName ofType:@"png"]];
+    UIImage *image = [UIImage imageNamed:imageName inBundle:[NSBundle getOpenAccountBundle] compatibleWithTraitCollection:nil];
     
     return image;
 }
