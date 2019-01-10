@@ -9,9 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImage (OpenAccount)
+@interface UIImage (TGTGlue)
 
-+ (UIImage *)tgt_openAccountImageName:(NSString *)imageName;
++ (UIImage *)tgt_glueImageName:(NSString *)imageName;
 
 @end
 

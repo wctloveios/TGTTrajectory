@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char TGTLifeVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <TGTLife/PublicHeader.h>
 
 #import <TGTLife/TGTLifeViewController.h>
+#import <TGTLife/TGTAddLifeViewController.h>

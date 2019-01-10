@@ -10,7 +10,7 @@
 
 @implementation UIImage (OpenAccount)
 
-+ (UIImage *)tgt_imageName:(NSString *)imageName {
++ (UIImage *)tgt_openAccountImageName:(NSString *)imageName {
     UIImage *image = [UIImage imageNamed:imageName inBundle:[NSBundle getOpenAccountBundle] compatibleWithTraitCollection:nil];
     
     return image;

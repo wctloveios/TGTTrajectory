@@ -60,7 +60,7 @@
 - (UIImageView *)tgt_imageView {
     if (!_tgt_imageView) {
         _tgt_imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _tgt_imageView.image = [UIImage tgt_imageName:@"tgt_topImage"];
+        _tgt_imageView.image = [UIImage tgt_openAccountImageName:@"tgt_topImage"];
     }
     
     return _tgt_imageView;

@@ -14,5 +14,8 @@ Pod::Spec.new do |s|
   s.author             = { "jianhuaqiao.qjh" => "jianhuaqiao.qjh@alibaba-inc.com" }
   s.source       =  { 'path' => s.name }
   s.source_files  = "#{s.name}/**/*.{h,m}"
+  s.resource_bundles = {
+      'TGTGlue' => ["#{s.name}/**/*.{xcassets}"],
+  }
 
 end

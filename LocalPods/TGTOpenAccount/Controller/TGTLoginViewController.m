@@ -40,10 +40,10 @@
 - (void)textFieldDidChange:(UITextField *)textfiled {
     if (textfiled.text.length >= 11 ) {
         _confirmBtn.userInteractionEnabled = YES;
-        [_confirmBtn setBackgroundImage:[UIImage tgt_imageName:@"tgt_btn_confim_sel"] forState:UIControlStateNormal];
+        [_confirmBtn setBackgroundImage:[UIImage tgt_openAccountImageName:@"tgt_btn_confim_sel"] forState:UIControlStateNormal];
     } else {
         _confirmBtn.userInteractionEnabled = NO;
-        [_confirmBtn setBackgroundImage:[UIImage tgt_imageName:@"tgt_btn_confim_unSel"] forState:UIControlStateNormal];
+        [_confirmBtn setBackgroundImage:[UIImage tgt_openAccountImageName:@"tgt_btn_confim_unSel"] forState:UIControlStateNormal];
     }
 }
 
@@ -86,7 +86,7 @@
     
     TGTLoginTopView *topView = [[TGTLoginTopView alloc] initWithFrame:CGRectZero];
     topView.tgt_titleLabel.text = @"手机号";
-    topView.tgt_iconImageView.image = [UIImage tgt_imageName:@"tgt_icon_phone"];
+    topView.tgt_iconImageView.image = [UIImage tgt_openAccountImageName:@"tgt_icon_phone"];
     [self.view addSubview:topView];
     [topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_offset(44 + [UIApplication sharedApplication].statusBarFrame.size.height);
@@ -148,7 +148,7 @@
         [_confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _confirmBtn.layer.cornerRadius = 20.f;
         _confirmBtn.layer.masksToBounds = YES;
-        [_confirmBtn setBackgroundImage:[UIImage tgt_imageName:@"tgt_btn_confim_unSel"] forState:UIControlStateNormal];
+        [_confirmBtn setBackgroundImage:[UIImage tgt_openAccountImageName:@"tgt_btn_confim_unSel"] forState:UIControlStateNormal];
         [_confirmBtn setTitle:@"登录" forState:UIControlStateNormal];
         _confirmBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         _confirmBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 10, 0);

@@ -77,8 +77,8 @@
 - (UIButton *)tgt_pwdBtn {
     if (!_tgt_pwdBtn) {
         _tgt_pwdBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_tgt_pwdBtn setImage:[UIImage tgt_imageName:@"tgt_icon_phone"] forState:UIControlStateNormal];
-        [_tgt_pwdBtn setImage:[UIImage tgt_imageName:@"tgt_btn_sel_agree"] forState:UIControlStateSelected];
+        [_tgt_pwdBtn setImage:[UIImage tgt_openAccountImageName:@"tgt_icon_phone"] forState:UIControlStateNormal];
+        [_tgt_pwdBtn setImage:[UIImage tgt_openAccountImageName:@"tgt_btn_sel_agree"] forState:UIControlStateSelected];
         _tgt_pwdBtn.selected = YES;
         [_tgt_pwdBtn addTarget:self action:@selector(changePwdShowStyle:) forControlEvents:UIControlEventTouchUpInside];
     }
