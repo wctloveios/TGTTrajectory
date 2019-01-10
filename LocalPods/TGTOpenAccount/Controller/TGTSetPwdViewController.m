@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 #import "UIImage+OpenAccount.h"
 #import "TGTPwdTFView.h"
+#import "TGTOpenAccountManager.h"
 
 @interface TGTSetPwdViewController ()<TGTPwdTFViewTFDelegate>
 
@@ -29,7 +30,14 @@
 #pragma mark - Method
 
 - (void)clickConfireBtn:(UIButton *)button {
+    if (self.loginType == TGTLoginTypeLogin) {
+        NSLog(@"登录---直接登录成功了");
+    } else {
+        NSLog(@"注册---直接登录成功了");
+    }
     
+    [[TGTOpenAccountManager shareInstance] loginSucces];
+    [[TGTOpenAccountManager shareInstance] changeRootViewControllerWithLoginSuccess];
 }
 
 #pragma mark - TGTPwdTFViewTFDelegate
@@ -47,7 +55,7 @@
 #pragma mark - configureView
 
 - (void)configureView {
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     TGTLoginTopView *topView = [[TGTLoginTopView alloc] initWithFrame:CGRectZero];
     topView.tgt_titleLabel.text = @"密码";

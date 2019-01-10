@@ -14,10 +14,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shareInstance;
 
+- (BOOL)isLogin;
+
+- (void)logOut;
+
+- (void)loginSucces;
+
 /**
  push登录界面
  */
 - (void)pushLoginViewController;
+
+/**
+ 重置rootViewController
+ */
+- (void)changeRootViewControllerWithLoginSuccess;
+
 
 @end
 

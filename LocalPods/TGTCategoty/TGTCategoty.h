@@ -22,3 +22,4 @@ FOUNDATION_EXPORT const unsigned char TGTCategotyVersionString[];
 #import <TGTCategoty/UIColor+TGTExtension.h>
 #import <TGTCategoty/UIFont+TGTExtension.h>
 #import <TGTCategoty/UIImage+TGTExtension.h>
+#import <TGTCategoty/UITabBarItem+TGTExtension.h>

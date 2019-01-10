@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <TGTOpenAccount/TGTOpenAccount.h>
+#import <TGTGlue/TGTTabBarController.h>
 
 @interface ViewController ()
 
@@ -18,11 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [[TGTOpenAccountManager shareInstance] pushLoginViewController];
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [[TGTOpenAccountManager shareInstance] pushLoginViewController];
+     [UIApplication sharedApplication].keyWindow.rootViewController = [TGTTabBarController rootViewControoler];
 }
 
 @end

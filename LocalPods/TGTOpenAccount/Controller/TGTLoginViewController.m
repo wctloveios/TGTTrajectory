@@ -14,6 +14,7 @@
 #import <TGTHUD/TGTHUD.h>
 #import "TGTOpenAccountMarco.h"
 #import "TGTVerCodeViewController.h"
+#import "TGTSetPwdViewController.h"
 
 @interface TGTLoginViewController ()
 
@@ -62,13 +63,16 @@
     if (self.iPhoneTF.text.length == 11 && [NSString checkPhoneRegularExpression:self.iPhoneTF.text]) {
         NSLog(@"开始请求服务");
         if (self.tgtLoginType == TGTLoginTypeRegister) {
-            //注册
+            NSLog(@"登录---进入验证码页面！");
             TGTVerCodeViewController *view = [[TGTVerCodeViewController alloc] init];
             view.iPhoneStr = self.iPhoneTF.text;
             view.tgtLoginType = TGTLoginTypeRegister;
             [self.navigationController pushViewController:view animated:YES];
         } else {
-            //登录
+            NSLog(@"登录---进入密码页面！");
+            TGTSetPwdViewController *view = [[TGTSetPwdViewController alloc] init];
+            view.loginType = TGTLoginTypeLogin;
+            [self.navigationController pushViewController:view animated:YES];
         }
     } else {
         [self ims_showHUDWithMessage:@"请输入正确的手机号!"];

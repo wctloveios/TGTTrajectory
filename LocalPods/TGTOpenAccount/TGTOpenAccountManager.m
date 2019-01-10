@@ -8,8 +8,9 @@
 
 #import "TGTOpenAccountManager.h"
 #import "TGTLoginViewController.h"
+#import <TGTGlue/TGTTabBarController.h>
 
-#define TGTKeyWindow [UIApplication sharedApplication].delegate.window
+static NSString *const  TGTLoginSuccessSateKey = @"TGT_LOGIN_SUCCESS_STATE";
 
 @implementation TGTOpenAccountManager
 
@@ -23,10 +24,29 @@
     return instance;
 }
 
+- (BOOL)isLogin {
+    BOOL loginState = [[NSUserDefaults standardUserDefaults] boolForKey:TGTLoginSuccessSateKey];
+    return loginState;
+}
+
+- (void)logOut {
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:TGTLoginSuccessSateKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)loginSucces {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:TGTLoginSuccessSateKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 - (void)pushLoginViewController {
     UINavigationController *navi = [[UINavigationController alloc] init];
-    TGTKeyWindow.rootViewController = navi;
+    [UIApplication sharedApplication].keyWindow.rootViewController = navi;
     [navi pushViewController:[TGTLoginViewController new] animated:YES];
+}
+
+- (void)changeRootViewControllerWithLoginSuccess {
+    [UIApplication sharedApplication].keyWindow.rootViewController = [TGTTabBarController rootViewControoler];
 }
 
 #pragma mark - Private

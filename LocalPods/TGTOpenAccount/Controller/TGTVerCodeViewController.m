@@ -44,14 +44,16 @@
 #pragma mark - Method
 
 - (void)clickConfireBtn:(UIButton *)button {
+    NSLog(@"验证码---进入密码页面！");
     TGTSetPwdViewController *view = [[TGTSetPwdViewController alloc] init];
+    view.loginType = TGTLoginTypeRegister;
     [self.navigationController pushViewController:view animated:YES];
 }
 
 #pragma mark - configureView
 
 - (void)configureView {
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     TGTLoginTopView *topView = [[TGTLoginTopView alloc] initWithFrame:CGRectZero];
     topView.tgt_titleLabel.text = @"手机验证码";
