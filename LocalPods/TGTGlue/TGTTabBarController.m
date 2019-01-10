@@ -49,26 +49,26 @@
     
     UIViewController *matchController = [[TGTMatchViewController alloc] init];
     matchController.tabBarItem = [UITabBarItem tgt_tabBarItemWithTitle:@"匹配"
-                                                                  image:nil
-                                                          selectedImage:nil];
+                                                                  image:[UIImage imageNamed:@"IMSLivingLink_device_normal"]
+                                                          selectedImage:[UIImage imageNamed:@"IMSLivingLink_device_selected"]];
     tabBarController.tgtMatchTabBarItem = matchController.tabBarItem;
     
     TGTLifeViewController *lifeController = [[TGTLifeViewController alloc] init];
     lifeController.tabBarItem = [UITabBarItem tgt_tabBarItemWithTitle:@"轨迹"
-                                                                  image:nil
-                                                          selectedImage:nil];
+                                                                image:[UIImage imageNamed:@"IMSLivingLink_device_normal"]
+                                                        selectedImage:[UIImage imageNamed:@"IMSLivingLink_device_selected"]];
     tabBarController.tgtLifeTabBarItem = lifeController.tabBarItem;
     
     TGTMessageViewController *messageController = [[TGTMessageViewController alloc] init];
     messageController.tabBarItem = [UITabBarItem tgt_tabBarItemWithTitle:@"消息"
-                                                                image:nil
-                                                        selectedImage:nil];
+                                                                   image:[UIImage imageNamed:@"IMSLivingLink_device_normal"]
+                                                           selectedImage:[UIImage imageNamed:@"IMSLivingLink_device_selected"]];
     tabBarController.tgtMessageTabBarItem = messageController.tabBarItem;
     
     TGTUserViewController *userController = [[TGTUserViewController alloc] init];
     userController.tabBarItem = [UITabBarItem tgt_tabBarItemWithTitle:@"我的"
-                                                                image:nil
-                                                        selectedImage:nil];
+                                                                image:[UIImage imageNamed:@"IMSLivingLink_device_normal"]
+                                                        selectedImage:[UIImage imageNamed:@"IMSLivingLink_device_selected"]];
     tabBarController.tgtUserTabBarItem = userController.tabBarItem;
     
     UINavigationController *matchNavController = [[UINavigationController alloc] initWithRootViewController:matchController];

@@ -22,9 +22,9 @@
                                                              image:image
                                                      selectedImage:selectedImage];
     
-    [tabBarItem setTitleTextAttributes:@{ NSForegroundColorAttributeName :  [UIColor blackColor]}
+    [tabBarItem setTitleTextAttributes:@{ NSForegroundColorAttributeName :  [UIColor lightGrayColor]}
                               forState:UIControlStateNormal];
-    [tabBarItem setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor TGT_systemLeftColor]}
+    [tabBarItem setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor redColor]}
                               forState:UIControlStateSelected];
     
     return tabBarItem;
