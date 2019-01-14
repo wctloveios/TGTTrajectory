@@ -52,14 +52,14 @@
     
     UIViewController *matchController = [[TGTMatchViewController alloc] init];
     matchController.tabBarItem = [UITabBarItem tgt_tabBarItemWithTitle:@"匹配"
-                                                                  image:[UIImage tgt_glueImageName:@"tgt_math_sel"]
+                                                                  image:[UIImage tgt_glueImageName:@"tgt_math_nomal"]
                                                           selectedImage:[UIImage tgt_glueImageName:@"tgt_math_sel"]];
     tabBarController.tgtMatchTabBarItem = matchController.tabBarItem;
     
     TGTLifeViewController *lifeController = [[TGTLifeViewController alloc] init];
     lifeController.tabBarItem = [UITabBarItem tgt_tabBarItemWithTitle:@"轨迹"
                                                                 image:[UIImage tgt_glueImageName:@"tgt_life_nomal"]
-                                                        selectedImage:[UIImage tgt_glueImageName:@"tgt_life_nomal"]];
+                                                        selectedImage:[UIImage tgt_glueImageName:@"tgt_life_sel"]];
     tabBarController.tgtLifeTabBarItem = lifeController.tabBarItem;
     
     TGTAddLifeViewController *addLifeController = [[TGTAddLifeViewController alloc] init];
@@ -72,7 +72,7 @@
     TGTMessageViewController *messageController = [[TGTMessageViewController alloc] init];
     messageController.tabBarItem = [UITabBarItem tgt_tabBarItemWithTitle:@"消息"
                                                                    image:[UIImage tgt_glueImageName:@"tgt_message_nomal"]
-                                                           selectedImage:[UIImage tgt_glueImageName:@"tgt_message_nomal"]];
+                                                           selectedImage:[UIImage tgt_glueImageName:@"tgt_message_sel"]];
     tabBarController.tgtMessageTabBarItem = messageController.tabBarItem;
     
     TGTUserViewController *userController = [[TGTUserViewController alloc] init];

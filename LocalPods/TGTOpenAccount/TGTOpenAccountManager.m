@@ -11,6 +11,8 @@
 #import <TGTGlue/TGTTabBarController.h>
 
 static NSString *const  TGTLoginSuccessSateKey = @"TGT_LOGIN_SUCCESS_STATE";
+static NSString *const  TGTLoginSuccessSateNoti = @"TGT_LOGIN_SUCCESS_NOTI";
+static NSString *const  TGTLogoutSuccessSateNoti = @"TGT_LOGOUT_SUCCESS_NOTI";
 
 @implementation TGTOpenAccountManager
 
@@ -30,13 +32,31 @@ static NSString *const  TGTLoginSuccessSateKey = @"TGT_LOGIN_SUCCESS_STATE";
 }
 
 - (void)logOut {
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:TGTLoginSuccessSateKey];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:TGTLogoutSuccessSateNoti object:nil];
 }
 
 - (void)loginSucces {
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:TGTLoginSuccessSateKey];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:TGTLoginSuccessSateNoti object:nil];
+}
+
+- (void)tgtSetRootViewControllerWithLoginSuccess:(void(^)(UIViewController *viewController))success {
+    [[NSNotificationCenter defaultCenter] addObserverForName:TGTLoginSuccessSateNoti object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:TGTLoginSuccessSateKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self changeRootViewControllerWithLoginSuccess];
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:TGTLogoutSuccessSateNoti object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:TGTLoginSuccessSateKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self pushLoginViewController];
+    }];
+    
+    if ([self isLogin]) {
+        [self changeRootViewControllerWithLoginSuccess];
+    } else {
+        [self pushLoginViewController];
+    }
 }
 
 - (void)pushLoginViewController {

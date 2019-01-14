@@ -37,7 +37,6 @@
     }
     
     [[TGTOpenAccountManager shareInstance] loginSucces];
-    [[TGTOpenAccountManager shareInstance] changeRootViewControllerWithLoginSuccess];
 }
 
 #pragma mark - TGTPwdTFViewTFDelegate
@@ -48,18 +47,16 @@
         [_confirmBtn setBackgroundImage:[UIImage tgt_openAccountImageName:@"tgt_btn_confim_sel"] forState:UIControlStateNormal];
     } else {
         _confirmBtn.userInteractionEnabled = NO;
-        [_confirmBtn setBackgroundImage:[UIImage tgt_openAccountImageName:@"tgt_btn_confim_unSel"] forState:UIControlStateNormal];
+        [_confirmBtn setBackgroundImage:[UIImage tgt_openAccountImageName:@"tgt_btn_confim_nomal"] forState:UIControlStateNormal];
     }
 }
 
 #pragma mark - configureView
 
 - (void)configureView {
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-    
     TGTLoginTopView *topView = [[TGTLoginTopView alloc] initWithFrame:CGRectZero];
     topView.tgt_titleLabel.text = @"密码";
-    topView.tgt_iconImageView.image = [UIImage tgt_openAccountImageName:@"tgt_icon_phone"];
+    topView.tgt_iconImageView.image = [UIImage tgt_openAccountImageName:@"tgt_icon_pwd"];
     [self.view addSubview:topView];
     [topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_offset(44 + [UIApplication sharedApplication].statusBarFrame.size.height);
@@ -95,7 +92,7 @@
         [_confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _confirmBtn.layer.cornerRadius = 20.f;
         _confirmBtn.layer.masksToBounds = YES;
-        [_confirmBtn setBackgroundImage:[UIImage tgt_openAccountImageName:@"tgt_btn_confim_unSel"] forState:UIControlStateNormal];
+        [_confirmBtn setBackgroundImage:[UIImage tgt_openAccountImageName:@"tgt_btn_confim_nomal"] forState:UIControlStateNormal];
         [_confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
         _confirmBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         _confirmBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 10, 0);

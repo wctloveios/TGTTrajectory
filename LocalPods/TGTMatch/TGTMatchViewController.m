@@ -21,10 +21,6 @@
     
     self.title = @"匹配";
     self.view.backgroundColor = [UIColor yellowColor];
-
-    if (![[TGTOpenAccountManager shareInstance] isLogin]) {
-        [[TGTOpenAccountManager shareInstance] pushLoginViewController];
-    }
 }
 
 /*

@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
               Alibaba-Inc copyright
     LICENSE
     }
-  s.author             = { "jianhuaqiao.qjh" => "jianhuaqiao.qjh@alibaba-inc.com" }
+  s.author             = { "wctloveios" => "wctloveios@163.com" }
   s.source       =  { 'path' => s.name }
   s.source_files  = "#{s.name}/**/*.{h,m}"
 

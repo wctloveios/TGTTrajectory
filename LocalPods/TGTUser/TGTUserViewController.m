@@ -7,6 +7,7 @@
 //
 
 #import "TGTUserViewController.h"
+#import <TGTOpenAccount/TGTOpenAccount.h>
 
 @interface TGTUserViewController ()
 
@@ -20,6 +21,11 @@
     
     self.title = @"我的";
     self.view.backgroundColor = [UIColor lightGrayColor];
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [[TGTOpenAccountManager shareInstance] logOut];
 }
 
 /*

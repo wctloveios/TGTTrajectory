@@ -14,22 +14,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shareInstance;
 
+//获取登录状态
 - (BOOL)isLogin;
 
+//退出登录调用
 - (void)logOut;
 
+//登录成功调用
 - (void)loginSucces;
 
 /**
- push登录界面
- */
-- (void)pushLoginViewController;
+ 设置rootViewController通过登录状态值
 
-/**
- 重置rootViewController
+ @param success 成功回调
  */
-- (void)changeRootViewControllerWithLoginSuccess;
-
+- (void)tgtSetRootViewControllerWithLoginSuccess:(void(^)(UIViewController *viewController))success;
 
 @end
 
