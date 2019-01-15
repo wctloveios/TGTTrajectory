@@ -11,10 +11,12 @@
 #import "UIImage+OpenAccount.h"
 #import "TGTPwdTFView.h"
 #import "TGTOpenAccountManager.h"
+#import <TGTHUD/TGTHUD.h>
 
 @interface TGTSetPwdViewController ()<TGTPwdTFViewTFDelegate>
 
 @property (nonatomic, strong) UIButton *confirmBtn;
+@property (nonatomic, strong) TGTPwdTFView *pwdTFView;
 
 @end
 
@@ -30,12 +32,12 @@
 #pragma mark - Method
 
 - (void)clickConfireBtn:(UIButton *)button {
-    if (self.loginType == TGTLoginTypeLogin) {
-        NSLog(@"登录---直接登录成功了");
-    } else {
-        NSLog(@"注册---直接登录成功了");
+    if (self.pwdTFView.tgt_pwdTF.text.length < 6 || self.pwdTFView.tgt_pwdTF.text.length > 20) {
+        [self ims_showHUDWithMessage:@"请确认密码长度在 6-20 位之间"];
+        return;
     }
     
+    NSLog(@"注册---直接登录成功了");
     [[TGTOpenAccountManager shareInstance] loginSucces];
 }
 
@@ -64,10 +66,8 @@
         make.height.mas_offset(110);
     }];
     
-    TGTPwdTFView *pwdView = [[TGTPwdTFView alloc] initWithFrame:CGRectZero];
-    pwdView.tgt_delegate = self;
-    [self.view addSubview:pwdView];
-    [pwdView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.pwdTFView];
+    [self.pwdTFView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(topView.tgt_iconImageView.mas_bottom).offset(11);
         make.left.mas_offset(70);
         make.right.mas_offset(-70);
@@ -76,7 +76,7 @@
     
     [self.view addSubview:self.confirmBtn];
     [self.confirmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(pwdView.mas_bottom).offset(5);
+        make.top.equalTo(self.pwdTFView.mas_bottom).offset(5);
         make.centerX.mas_offset(0);
         make.height.mas_offset(81);
         make.width.mas_offset(148);
@@ -85,6 +85,15 @@
 
 
 #pragma mark - Lazy Loading
+
+- (TGTPwdTFView *)pwdTFView {
+    if (!_pwdTFView) {
+        _pwdTFView = [[TGTPwdTFView alloc] initWithFrame:CGRectZero];
+        _pwdTFView.tgt_delegate = self;
+    }
+    
+    return _pwdTFView;
+}
 
 - (UIButton *)confirmBtn {
     if (!_confirmBtn) {

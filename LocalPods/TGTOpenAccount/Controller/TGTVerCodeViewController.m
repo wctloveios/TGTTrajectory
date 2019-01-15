@@ -17,6 +17,9 @@
 
 @property (nonatomic, strong) UIButton *confirmBtn;
 @property (nonatomic, strong) UILabel *descLabel;
+@property (nonatomic, strong) UIButton *repostBtn;
+@property (nonatomic, strong) NSTimer *tgtTimer;
+@property (nonatomic, assign) NSInteger repostNumber;
 
 @end
 
@@ -27,6 +30,49 @@
     // Do any additional setup after loading the view.
    
     [self configureView];
+    [self creatTGTTimer];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [self.tgtTimer invalidate];
+    self.tgtTimer = nil;
+}
+
+#pragma mark - Method
+
+- (void)creatTGTTimer {
+    self.repostNumber = 5;
+    [self.repostBtn setTitleColor:[UIColor TGT_colorWithHexRGB:0xbbbbbb] forState:UIControlStateNormal];
+    self.repostBtn.userInteractionEnabled = NO;
+    self.tgtTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateRepostBtnTitleText) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.tgtTimer forMode:NSDefaultRunLoopMode];
+}
+
+- (void)clickConfireBtn:(UIButton *)button {
+    NSLog(@"验证码---进入密码页面！");
+    TGTSetPwdViewController *view = [[TGTSetPwdViewController alloc] init];
+    [self.navigationController pushViewController:view animated:YES];
+}
+
+- (void)repostVerCode:(UIButton *)button {
+    [self creatTGTTimer];
+    //调接口
+}
+
+- (void)updateRepostBtnTitleText {
+    if (self.repostNumber == 1) {
+        [self.repostBtn setTitle:@"重新发送" forState:UIControlStateNormal];
+        self.repostBtn.userInteractionEnabled = YES;
+        [self.repostBtn setTitleColor:[UIColor TGT_colorWithHexRGB:0xff6f61] forState:UIControlStateNormal];
+        [self.tgtTimer invalidate];
+        self.tgtTimer = nil;
+        return;
+    }
+    
+    self.repostNumber -= 1;
+    [self.repostBtn setTitle:[NSString stringWithFormat:@"重新发送(%ld)",self.repostNumber] forState:UIControlStateNormal];
 }
 
 #pragma mark - TGTVerCodeViewTFDelegate
@@ -39,15 +85,6 @@
         _confirmBtn.userInteractionEnabled = NO;
         [_confirmBtn setBackgroundImage:[UIImage tgt_openAccountImageName:@"tgt_btn_confim_nomal"] forState:UIControlStateNormal];
     }
-}
-
-#pragma mark - Method
-
-- (void)clickConfireBtn:(UIButton *)button {
-    NSLog(@"验证码---进入密码页面！");
-    TGTSetPwdViewController *view = [[TGTSetPwdViewController alloc] init];
-    view.loginType = TGTLoginTypeRegister;
-    [self.navigationController pushViewController:view animated:YES];
 }
 
 #pragma mark - configureView
@@ -70,7 +107,7 @@
     [codeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(topView.tgt_iconImageView.mas_bottom).offset(11);
         make.centerX.mas_offset(0);
-        make.width.mas_offset(197);
+        make.width.mas_offset(197 + 42);
         make.height.mas_offset(35);
     }];
     
@@ -81,9 +118,15 @@
         make.height.mas_offset(11);
     }];
     
+    [self.view addSubview:self.repostBtn];
+    [self.repostBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.descLabel.mas_bottom).offset(10);
+        make.centerX.mas_offset(0);
+    }];
+    
     [self.view addSubview:self.confirmBtn];
     [self.confirmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.descLabel.mas_bottom).offset(5);
+        make.top.equalTo(self.repostBtn.mas_bottom).offset(5);
         make.centerX.mas_offset(0);
         make.height.mas_offset(81);
         make.width.mas_offset(148);
@@ -103,6 +146,19 @@
     }
     
     return _descLabel;
+}
+
+- (UIButton *)repostBtn {
+    if (!_repostBtn) {
+        _repostBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_repostBtn setTitleColor:[UIColor TGT_colorWithHexRGB:0xbbbbbb] forState:UIControlStateNormal];
+        [_repostBtn setTitle:@"重新发送" forState:UIControlStateNormal];
+        _repostBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+        [_repostBtn addTarget:self action:@selector(repostVerCode:) forControlEvents:UIControlEventTouchUpInside];
+        _repostBtn.userInteractionEnabled = NO;
+        [_repostBtn sizeToFit];
+    }
+    return _repostBtn;
 }
 
 - (UIButton *)confirmBtn {

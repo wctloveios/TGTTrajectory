@@ -82,8 +82,8 @@
 
 - (void)configureView {
     CGFloat tfBGWidth = 33;
-    CGFloat tfWidth = 10;
-    CGFloat intervalWidth = 13;
+    CGFloat tfWidth = 15;
+    CGFloat intervalWidth = 20;
     
     UIView *viewOne = [[UIView alloc] initWithFrame:CGRectZero];
     viewOne.backgroundColor = [UIColor TGT_EEEEEEColor];
